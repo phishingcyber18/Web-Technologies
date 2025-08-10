@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Account Deactivation Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #a18cd1); /* Pink-Violet Gradient */
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            text-align: center;
+            color: white;
+            padding-top: 20px;
+        }
+
+        form {
+            background: white;
+            width: 450px;
+            margin: 30px auto;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+
+        fieldset {
+            border: none; /* Remove border lines */
+            margin-bottom: 15px;
+        }
+
+        legend {
+            font-weight: bold;
+            color: #a01855; /* Deep pink */
+            margin-bottom: 8px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 95%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin-top: 5px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #a18cd1;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #ff9a9e;
+        }
+
+        label {
+            display: inline-block;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Deactivate Your Account</h2>
+
+    <form action="#">
+
+        <fieldset>
+            <legend>Personal Details</legend>
+            Full Name:<br>
+            <input type="text" name="name" required><br><br>
+            Email Address:<br>
+            <input type="email" name="email" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Main Reason for Leaving</legend>
+            <input type="radio" name="reason" value="Not Useful"> I no longer find the platform useful<br>
+            <input type="radio" name="reason" value="Privacy Concerns"> I have privacy concerns<br>
+            <input type="radio" name="reason" value="Too Many Emails"> Too many emails or notifications<br>
+            <input type="radio" name="reason" value="Another Account"> I already use another account<br>
+            <input type="radio" name="reason" value="Other"> Other reasons
+        </fieldset>
+
+        <fieldset>
+            <legend>Other Contributing Factors (optional)</legend>
+            <input type="checkbox" name="factors" value="Job Change"> Job change<br>
+            <input type="checkbox" name="factors" value="Content Quality"> Low quality content<br>
+            <input type="checkbox" name="factors" value="Harassment"> Harassment or abuse<br>
+            <input type="checkbox" name="factors" value="Too Much Time"> Platform consumes too much time
+        </fieldset>
+
+        <fieldset>
+            <legend>Additional Comments</legend>
+            <textarea name="comments" rows="4" placeholder="Let us know how we can improve..."></textarea>
+        </fieldset>
+
+        <input type="submit" value="Deactivate Account">
+        <input type="reset" value="Reset">
+
+    </form>
+
+</body>
+</html>

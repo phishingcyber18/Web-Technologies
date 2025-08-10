@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Student Registration Form</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #2dd4bf, #3b82f6); /* Unique blue-green gradient */
+        color: #333;
+    }
+
+    fieldset {
+        width: 400px;
+        margin: auto;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: white;
+    }
+
+    legend {
+        color: blue;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+        background-color: lightseagreen;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+</style>
+
+</head>
+<body>
+<h2 align="center">Student Registration</h2>
+
+<form action="#" align="center">
+    <fieldset>
+        <legend><b>Registration Details</b></legend>
+
+        <!-- Full Name -->
+        <label for="name">Full Name:</label><br>
+        <input type="text" id="name" name="name" size="40" required><br><br>
+
+        <!-- Email -->
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" size="40" required><br><br>
+
+        <!-- Phone -->
+        <label for="phone">Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone" size="40" required><br><br>
+
+        <!-- Gender (Radio Buttons) -->
+        <label>Gender:</label><br>
+        <input type="radio" id="male" name="gender" value="Male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="Other">
+        <label for="other">Other</label><br><br>
+
+        <!-- Hobbies (Checkboxes) -->
+        <label>Hobbies:</label><br>
+        <input type="checkbox" id="reading" name="hobbies" value="Reading">
+        <label for="reading">Reading</label>
+        <input type="checkbox" id="sports" name="hobbies" value="Sports">
+        <label for="sports">Sports</label>
+        <input type="checkbox" id="music" name="hobbies" value="Music">
+        <label for="music">Music</label>
+        <input type="checkbox" id="travel" name="hobbies" value="Travel">
+        <label for="travel">Travel</label><br><br>
+
+        <!-- Course (Dropdown) -->
+        <label for="course">Course:</label><br>
+        <select id="course" name="course" required>
+            <option value="">--Select Course--</option>
+            <option value="CSE">Computer Science</option>
+            <option value="ECE">Electronics</option>
+            <option value="EEE">Electrical</option>
+            <option value="MECH">Mechanical</option>
+            <option value="CIVIL">Civil</option>
+        </select><br><br>
+
+        <!-- Buttons -->
+        <input type="submit" value="Register">
+        <input type="reset" value="Reset">
+    </fieldset>
+</form>
+
+</body>
+</html>
