@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Page</title>
+    <style>
+        /* General Body Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Header and Footer */
+        header, footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #444;
+            padding: 1em;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5em 1em;
+            display: block; /* Links stack vertically on mobile */
+            text-align: center;
+        }
+
+        /* Main Content Area */
+        main {
+            padding: 1em;
+        }
+
+        .content, .sidebar {
+            background-color: white;
+            padding: 1em;
+            margin-bottom: 1em;
+        }
+
+        /* --- MEDIA QUERIES for Responsiveness --- */
+
+        /* For Tablets and wider screens (768px and up) */
+        @media (min-width: 768px) {
+            main {
+                display: flex;
+            }
+            .content {
+                flex: 3; /* Takes up 3/4 of the space */
+                margin-right: 1em;
+            }
+            .sidebar {
+                flex: 1; /* Takes up 1/4 of the space */
+            }
+            nav a {
+                display: inline-block; /* Links appear side-by-side */
+            }
+        }
+
+        /* For Desktops and wider screens (1024px and up) */
+        @media (min-width: 1024px) {
+            body {
+                font-size: 18px; /* Make text slightly larger on big screens */
+            }
+            header, footer, nav, main {
+                max-width: 1200px;
+                margin: 0 auto; /* Center the layout on very wide screens */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>My Website</h1>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <main>
+        <div class="content">
+            <h2>Main Content</h2>
+            <p>This is the main content area. On larger screens, the sidebar will appear next to this. Resize your browser window to see the layout change!</p>
+        </div>
+        <aside class="sidebar">
+            <h3>Sidebar</h3>
+            <p>This is the sidebar. It stacks on mobile and appears on the side on wider screens.</p>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 My Awesome Website</p>
+    </footer>
+
+</body>
+</html>
